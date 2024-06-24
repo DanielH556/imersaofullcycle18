@@ -64,7 +64,7 @@ func main() {
 	)
 
 	r := http.NewServeMux()
-	r.HandleFunc("/swagger/", httpSwagger.WrapHandler)
+	// r.HandleFunc("/swagger/", httpSwagger.WrapHandler)
 	r.HandleFunc("/events", eventsHandler.ListEvents)
 	r.HandleFunc("/events/{eventID}", eventsHandler.GetEvent)
 	r.HandleFunc("/events/{eventID}/spots", eventsHandler.ListSpots)
